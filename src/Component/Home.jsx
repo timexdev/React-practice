@@ -9,7 +9,6 @@ const Home = () => {
         padding:'30px',
     }
   return (
-
         <>
             <h1 style={{color:"red", backgroundColor:"white", padding:"30px"}}>INLINE STYLING</h1>
             <p style={myStyle}>INTERNAL STYLING</p>
@@ -20,5 +19,4 @@ const Home = () => {
         
   )
 }
-
 export default Home
