@@ -34,7 +34,7 @@ const State = () => {
       <button style={{marginLeft:"650px"}} onClick={increase}>Increase</button>
       <hr />
 
-      
+
       {/* INPUT IN REACT */}
       <div className="container">
         <h3>School Portal</h3>
