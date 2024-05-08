@@ -37,7 +37,7 @@ const State = () => {
 
       {/* INPUT IN REACT */}
       <div className="container">
-        <h3>School Portal</h3>
+        <h3 className="text-center">Registration Form</h3>
         <input
           type="text"
           placeholder="First Name"
