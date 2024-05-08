@@ -17,6 +17,12 @@ const StudentPortal = () => {
     setage("");
     setsex("");
   };
+
+  const deleteStudent = (userIndex) =>{
+    let newAllStudent = [...allstudent];
+    newAllStudent.splice(userIndex,1);
+    setallstudent(newAllStudent)
+  }
   return (
     <div className="container mt-5">
       <h3 className="text-center fw-bolder mb-3">STUDENT PORTAL</h3>
@@ -53,6 +59,7 @@ const StudentPortal = () => {
       <hr />
 
       <h3 className="text-center fw-bolder mt-5 mb-3">LIST OF STUDENTS</h3>
+      {allstudent.length == 0? <h3 className="text-center">There is no student</h3>:
       <table className="table table-striped">
         <thead>
         <tr>
@@ -73,8 +80,8 @@ const StudentPortal = () => {
             <td>{eachstudent.age}</td>
             <td>{eachstudent.sex}</td>
             <td>
-                <button className="btn btn-warning mx-3">Edit</button>
-                <button className="btn btn-danger">Delete</button>
+                <button  className="btn btn-warning mx-3">Edit</button>
+                <button onClick={() => deleteStudent(index)} className="btn btn-danger">Delete</button>
             </td>
             </tr>
           
@@ -86,6 +93,7 @@ const StudentPortal = () => {
       ))}
       </tbody>
       </table>
+      }
     </div>
   );
 };
